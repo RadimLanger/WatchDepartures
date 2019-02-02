@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D92635DC22061AF6000987DB /* RowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92635DB22061AF6000987DB /* RowController.swift */; };
+		D92635DE22062AAA000987DB /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92635DD22062AAA000987DB /* DetailController.swift */; };
+		D92635E0220634E7000987DB /* Station.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92635DF220634E7000987DB /* Station.swift */; };
+		D92635E222063679000987DB /* StationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92635E122063679000987DB /* StationsView.swift */; };
 		D9D818D722060CF900F7D111 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D818D622060CF900F7D111 /* AppDelegate.swift */; };
-		D9D818D922060CF900F7D111 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D818D822060CF900F7D111 /* MainViewController.swift */; };
+		D9D818D922060CF900F7D111 /* StationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D818D822060CF900F7D111 /* StationsTableViewController.swift */; };
 		D9D818DE22060CFA00F7D111 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9D818DD22060CFA00F7D111 /* Assets.xcassets */; };
 		D9D818E122060CFA00F7D111 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9D818DF22060CFA00F7D111 /* LaunchScreen.storyboard */; };
 		D9D818E622060CFA00F7D111 /* WatchDepartures WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = D9D818E522060CFA00F7D111 /* WatchDepartures WatchKit App.app */; };
@@ -65,9 +69,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D92635DB22061AF6000987DB /* RowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowController.swift; sourceTree = "<group>"; };
+		D92635DD22062AAA000987DB /* DetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
+		D92635DF220634E7000987DB /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
+		D92635E122063679000987DB /* StationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsView.swift; sourceTree = "<group>"; };
 		D9D818D322060CF900F7D111 /* WatchDepartures.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchDepartures.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9D818D622060CF900F7D111 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D9D818D822060CF900F7D111 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		D9D818D822060CF900F7D111 /* StationsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsTableViewController.swift; sourceTree = "<group>"; };
 		D9D818DD22060CFA00F7D111 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D9D818E022060CFA00F7D111 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D9D818E222060CFA00F7D111 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -127,10 +135,12 @@
 			isa = PBXGroup;
 			children = (
 				D9D818D622060CF900F7D111 /* AppDelegate.swift */,
-				D9D818D822060CF900F7D111 /* MainViewController.swift */,
+				D9D818D822060CF900F7D111 /* StationsTableViewController.swift */,
+				D92635DF220634E7000987DB /* Station.swift */,
 				D9D818DD22060CFA00F7D111 /* Assets.xcassets */,
 				D9D818DF22060CFA00F7D111 /* LaunchScreen.storyboard */,
 				D9D818E222060CFA00F7D111 /* Info.plist */,
+				D92635E122063679000987DB /* StationsView.swift */,
 			);
 			path = WatchDepartures;
 			sourceTree = "<group>";
@@ -149,6 +159,8 @@
 			isa = PBXGroup;
 			children = (
 				D9D818F922060CFB00F7D111 /* InterfaceController.swift */,
+				D92635DD22062AAA000987DB /* DetailController.swift */,
+				D92635DB22061AF6000987DB /* RowController.swift */,
 				D9D818FB22060CFB00F7D111 /* ExtensionDelegate.swift */,
 				D9D818FD22060CFB00F7D111 /* NotificationController.swift */,
 				D9D818FF22060CFB00F7D111 /* ComplicationController.swift */,
@@ -290,7 +302,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9D818D922060CF900F7D111 /* MainViewController.swift in Sources */,
+				D9D818D922060CF900F7D111 /* StationsTableViewController.swift in Sources */,
+				D92635E222063679000987DB /* StationsView.swift in Sources */,
+				D92635E0220634E7000987DB /* Station.swift in Sources */,
 				D9D818D722060CF900F7D111 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,6 +316,8 @@
 				D9D818FE22060CFB00F7D111 /* NotificationController.swift in Sources */,
 				D9D8190022060CFB00F7D111 /* ComplicationController.swift in Sources */,
 				D9D818FC22060CFB00F7D111 /* ExtensionDelegate.swift in Sources */,
+				D92635DC22061AF6000987DB /* RowController.swift in Sources */,
+				D92635DE22062AAA000987DB /* DetailController.swift in Sources */,
 				D9D818FA22060CFB00F7D111 /* InterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

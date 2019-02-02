@@ -9,23 +9,34 @@
 import WatchKit
 import Foundation
 
-
 class InterfaceController: WKInterfaceController {
 
-    override func awake(withContext context: Any?) {
-        super.awake(withContext: context)
-        
-        // Configure interface objects here.
-    }
-    
-    override func willActivate() {
-        // This method is called when watch view controller is about to be visible to user
-        super.willActivate()
-    }
-    
-    override func didDeactivate() {
-        // This method is called when watch view controller is no longer visible
-        super.didDeactivate()
+    @IBOutlet var table: WKInterfaceTable!
+
+    private var items = [String]() {
+        didSet {
+            DispatchQueue.main.async {
+                self.updateTable()
+            }
+        }
     }
 
+    override func willActivate() {
+        super.willActivate()
+
+        items = ["OMEGA LUL", "yay", "oi", "boi"]
+    }
+
+    private func updateTable() {
+        table.setNumberOfRows(items.count, withRowType: "RowController")
+        for (i, item) in items.enumerated() {
+            if let row = table.rowController(at: i) as? RowController {
+                row.textLabel.setText(item)
+            }
+        }
+    }
+
+    override func table(_ table: WKInterfaceTable, didSelectRowAt rowIndex: Int) {
+        pushController(withName: "DetailController", context: items[rowIndex])
+    }
 }

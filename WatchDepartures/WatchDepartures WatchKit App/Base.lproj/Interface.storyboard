@@ -1,16 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14256" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14460.31" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14243"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14219"/>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14460.16"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--Pick a point-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller title="Pick a point" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WatchDepartures_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="fiT-7q-v8T">
+                            <items>
+                                <tableRow identifier="RowController" id="vwR-kH-CcV" customClass="RowController" customModule="WatchDepartures_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="lz3-De-fil">
+                                        <items>
+                                            <label width="136" height="96" alignment="left" text="Label" textAlignment="center" id="u5B-Ax-98Y"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="textLabel" destination="u5B-Ax-98Y" id="7UW-rr-onP"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="table" destination="fiT-7q-v8T" id="ecX-Tp-9V1"/>
+                    </connections>
+                </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="345"/>
+            <point key="canvasLocation" x="156" y="10"/>
+        </scene>
+        <!--DetailController-->
+        <scene sceneID="Ebm-Yy-F05">
+            <objects>
+                <controller identifier="DetailController" id="JRO-Gx-lqQ" customClass="DetailController" customModule="WatchDepartures_WatchKit_Extension"/>
+            </objects>
+            <point key="canvasLocation" x="455" y="36"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
@@ -32,16 +63,16 @@
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">
             <objects>
-                <controller id="4sK-HA-Art" customClass="NotificationController" customModuleProvider="target"/>
+                <controller id="4sK-HA-Art" customClass="NotificationController" customModule="WatchDepartures_WatchKit_App" customModuleProvider="target"/>
             </objects>
-            <point key="canvasLocation" x="468" y="643"/>
+            <point key="canvasLocation" x="645" y="650"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="Niz-AI-uX2">
             <objects>
-                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModuleProvider="target"/>
+                <controller id="eXb-UN-Cd0" customClass="NotificationController" customModule="WatchDepartures_WatchKit_App" customModuleProvider="target"/>
             </objects>
-            <point key="canvasLocation" x="468" y="345"/>
+            <point key="canvasLocation" x="645" y="345"/>
         </scene>
     </scenes>
 </document>
